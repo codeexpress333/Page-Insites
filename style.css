@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+.container {
+    min-height: 400px;
+    width: 800px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 20px;
+}
+
+.content div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.content div img {
+    max-width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content div .name {
+    padding-left: 10px;
+    line-height: 1.5;
+}
+
+.content div .name p {
+    color: #444;
+}
+
+.content div button {
+    height: 40px;
+    width: 100px;
+    border: 0;
+    outline: none;
+    background: #2e2e2e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container nav {
+    height: 10vh;
+    width: 100%;
+}
+
+.container nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.container nav ul li a {
+    margin: 0 30px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.container nav ul li a.active,
+.container nav ul li a:hover {
+    color: #000;
+}
+
+.container .insites {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
+}
+
+.container .insites h3 {
+    color: #111;
+}
+
+.container .insites p {
+    color: #555;
+}
+
+.container .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card div {
+    height: 100px;
+    width: 200px;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    line-height: 1.6;
+    position: relative;
+}   
+
+.card div .card-content::before {
+    content: '⇵';
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    color: #6ce4be;
+    border: 2px solid #6ce4be;
+}
+
+.card-content p {
+    color: #6ce4be;
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: auto;
+        margin: 50px;
+        margin-top: 300px;
+    }
+    .container .content {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container nav ul {
+        justify-content: center;
+    }
+    .container .card {
+        justify-content: center;
+    }
+    .card div {
+        margin: 20px;
+    }
+}
+
